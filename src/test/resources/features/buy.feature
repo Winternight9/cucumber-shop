@@ -3,8 +3,8 @@ Feature: Buy products
     I want to buy products
 
 Background:
-    Given a product Bread with price 20.50 exists
-    And a product Jam with price 80.00 exists
+    Given a product Bread with price 20.50 exists with quantity 3
+    And a product Jam with price 80.00 exists with quantity 2
 
 Scenario: Buy one product
     When I buy Bread with quantity 2

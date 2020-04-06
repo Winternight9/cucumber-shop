@@ -22,7 +22,12 @@ public class Order {
     }
 
     public void addItem(Product prod, int quantity) {
-        items.add(new OrderItem(prod, quantity));
+        if(prod.getStock() < quantity){
+            throw new IllegalArgumentException("Stock less than order");
+        }
+        else{
+            items.add(new OrderItem(prod, quantity));
+        }
     }
 
     public double getTotal() {
